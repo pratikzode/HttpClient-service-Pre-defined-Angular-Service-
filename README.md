@@ -1,0 +1,2 @@
+# HttpClient-service-Pre-defined-Angular-Service-
+whenever we import any import in root module,its components &amp; services are auto available to the entire application   Angular HTTP Library provides us with a predefined module named as HttpClientModule  has a service HttpClient used for server communication over http It has a get() method is used to fetch data from server. It accepts a url &amp; connects to it ,fetches data &amp; returns it    HttpClientModule---->HttpClient service----->get(url)---->returns an  Observables
