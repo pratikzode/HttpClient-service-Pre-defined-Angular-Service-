@@ -1,0 +1,23 @@
+
+ <button (click)="listAllBooks()">List All Books</button><br/> 
+{{errmessage}}
+
+ <div>
+  <table border="1" *ngIf="status">
+  <tr>
+    <td>Id</td>
+    <td>Name</td>
+    <td>category</td>
+    <td>writer</td>
+  </tr>
+  <tr *ngFor="let book of bks">
+    <td>{{book.id}}</td>
+    <td>{{book.name}}</td>
+    <td>{{book.category}}</td>
+    <td>{{book.writer}}</td>
+    </tr>
+  </table>
+  </div>
+
+
+ 

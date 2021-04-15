@@ -1,0 +1,63 @@
+Day 19(9-Apr)
+-------------
+
+HttpClient service (Pre-defined Angular Service)
+------------------
+
+whenever we import any import in root module,its components & services are auto available to the entire application 
+
+Angular HTTP Library provides us with a predefined module named as HttpClientModule
+
+has a service HttpClient used for server communication over http
+It has a get() method is used to fetch data from server.
+It accepts a url & connects to it ,fetches data & returns it
+
+ 
+HttpClientModule---->HttpClient service----->get(url)---->returns an  Observables
+
+
+**setup:-copy 2 folders in my-dream-app
+angular-in-memory-web-api [backend]
+rxjs-compat [Observable]
+
+
+**steps to fetch the data using HttpClient service:-
+1)import HttpClientModule in app.module.ts
+2)inject the HttpClient service into the component using constructor
+3)using service ref invoke get(url) method
+syntax:-   
+http.get(url).subscribe(success code,error code)
+http.get(url).subscribe(data=>{code},error=>{code})
+
+**How to create the backend
+1)create an in-memory DB by writing  a class implementing InMemoryDbService 
+export class BookData implements InMemoryDbService {
+  createDb() {
+  }
+
+2)import InMemoryWebApiModule.forRoot(BookData) in app.module.ts
+_________________________________________________________
+
+Lab)create a component DataComponent which fetches tourism information using HttpClient service
+
+
+output:-
+button fetch data
+table/error message
+
+City     Information    State    Tourist Places(array)    
+
+_________________________________________________________
+
+Angular CLI commands
+--------------------
+1)To create a new Angular Project
+ng new <projectName>
+
+2)To create a component
+go in the project folder
+ng g component <ComponentName>
+It will create 4 files[html/css/ts/spec.ts] in a folder
+
+
+
